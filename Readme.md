@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анатолий  Дегтярь](https://up.htmlacademy.ru/adaptive/21/user/792499).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Корбут](https://htmlacademy.ru/profile/kotovyy).
 
 ---
 

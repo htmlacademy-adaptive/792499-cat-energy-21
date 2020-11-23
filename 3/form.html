@@ -24,38 +24,40 @@
   <main>
     <form class="form">
       <h1 class="form__title">Подбор программы</h1>
-      <section class="form-wrapper" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+      <section class="form__wrapper" method="get" action="https://echo.htmlacademy.ru" target="_blank">
         <h2>Заполните анкету, и мы подберем программу питания для вашего кота</h2>
-        <fieldset class="form__data">
-          <legend class="visually-hidden">Данные кота</legend>
-          <div class="form__elements">
-            <label class="form__label" for="cat-name">Имя:*</label>
-            <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
-          </div>
-          <div class="form__elements">
-            <label class="form__label" for="cat-weight">Вес (кг):*</label>
-            <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7">
-          </div>
-          <div class="form__elements">
-            <label class="form__label" for="cat-age">Возраст (лет):</label>
-            <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
-          </div>
-        </fieldset>
-        <fieldset class="form__programm">
-          <legend class="visually-hidden">Выбор программы питания</legend>
-          <div class="form__elements">
-            <input class="form__input" type="radio" name="slim" id="slim">
-            <label class="form__label" for="slim">Похудение</label>
-          </div>
-          <div class="form__elements">
-            <input class="form__input" type="radio" name="weight-gain" id="weight-gain">
-            <label class="form__label" for="weight-gain">Набор массы</label>
-          </div>
-          <div class="form__elements">
-            <input class="form__input" type="radio" name="need-advice" id="need-advice">
-            <label class="form__label" for="need-advice">Не знаю (нужен ваш совет)</label>
-          </div>
-        </fieldset>
+        <div class="form__inner">
+          <fieldset class="form__data">
+            <legend class="visually-hidden">Данные кота</legend>
+            <div class="form__elements">
+              <label class="form__label" for="cat-name">Имя:*</label>
+              <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+            </div>
+            <div class="form__elements">
+              <label class="form__label" for="cat-weight">Вес (кг):*</label>
+              <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7">
+            </div>
+            <div class="form__elements">
+              <label class="form__label" for="cat-age">Возраст (лет):</label>
+              <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
+            </div>
+          </fieldset>
+          <fieldset class="form__programm">
+            <legend class="visually-hidden">Выбор программы питания</legend>
+            <div class="form__elements">
+              <input class="form__input" type="radio" name="slim" id="slim">
+              <label class="form__label" for="slim">Похудение</label>
+            </div>
+            <div class="form__elements">
+              <input class="form__input" type="radio" name="weight-gain" id="weight-gain">
+              <label class="form__label" for="weight-gain">Набор массы</label>
+            </div>
+            <div class="form__elements">
+              <input class="form__input" type="radio" name="need-advice" id="need-advice">
+              <label class="form__label" for="need-advice">Не знаю (нужен ваш совет)</label>
+            </div>
+          </fieldset>
+        </div>
         <fieldset class="form__owner">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <div class="form__elements">
@@ -113,18 +115,18 @@
       </a>
       <div class="social page-footer__social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
-        <ul class="social-list">
-          <li class="social-item">
+        <ul class="social__list">
+          <li class="social__item">
             <span class="visually-hidden">Вконтакте</span>
-            <a class="social-link" href="#"></a>
+            <a class="social__link" href="#"></a>
           </li>
-          <li class="social-item">
+          <li class="social__item">
             <span class="visually-hidden">Инстаграм</span>
-            <a class="social-link" href="#"></a>
+            <a class="social__link" href="#"></a>
           </li>
-          <li class="social-item">
+          <li class="social__item">
             <span class="visually-hidden">Фейсбук</span>
-            <a class="social-link" href="#"></a>
+            <a class="social__link" href="#"></a>
           </li>
         </ul>
       </div>

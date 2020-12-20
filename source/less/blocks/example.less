@@ -1,0 +1,58 @@
+.example {
+  .offset(27px 0 25px 0; 0);
+  background-color: @grey;
+}
+
+.example__title {
+  .offset(0; 0 0 33px 0);
+  .typography(normal; 400; 36px; 40px);
+  color: @black;
+}
+
+.example__description {
+  .offset(0; 0 0 25px 0);
+  font-family: "Arial", sans-serif;
+  .typography(normal; 400; 14px; 18px);
+}
+
+.example__desc__section {
+  display: flex;
+  .offset(0; 0 0 21px 0);
+}
+
+.example__desc-list {
+  .offset(0; 0);
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    .offset(0; 0 31px 0 0);
+  }
+}
+
+.example__desc-term {
+  .offset(0; 0 0 9px 0);
+  .typography(normal; 400; 24px; 24px);
+  color: @black;
+  text-transform: uppercase;
+}
+
+.example__desc-definition {
+  .offset(0; 0);
+  font-family: "Arial", sans-serif;
+  .typography(normal; 400; 12px; 12px);
+}
+
+.example__cost {
+  .offset(0; 0 46px);
+  .typography(normal; 400; 14px; 20px);
+  color: @black;
+  text-transform: uppercase;
+}
+
+.example__range-text {
+  .offset(0; 0);
+  .typography(normal; 400; 16px; 20px);
+  color: @black;
+  text-transform: uppercase;
+}

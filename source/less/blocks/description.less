@@ -1,0 +1,41 @@
+.description {
+  .offset(0; 0 0 42px 0);
+}
+
+.description__title {
+  .offset(0; 0 0 38px 0);
+  .typography(normal; 400; 36px; 40px);
+  color: @black;
+}
+
+.description__list {
+  .offset(0 0 0 80px; 0);
+  font-family: "Arial", sans-serif;
+  .typography(normal; 400; 14px; 18px);
+  list-style-type: none;
+}
+
+.generate-description__item(@n) when (@n > 0) {
+  .description__item-@{n} {
+    position: relative;
+    .offset(0; 0 0 20px 0);
+
+    &:last-child {
+      .offset(0; 0);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../img/description__item_@{n}.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  .generate-description__item(@n - 1);
+}
+
+.generate-description__item(4);

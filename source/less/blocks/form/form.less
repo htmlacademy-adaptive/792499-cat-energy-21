@@ -21,10 +21,6 @@
   .border(0; 0; 0; 0);
 }
 
-.form__data {
-  .offset(0; 0 0 24px 0);
-}
-
 .form__label {
   .typography(normal; 400; 16px; 18px);
   text-transform: uppercase;
@@ -32,7 +28,11 @@
 }
 
 .form__input {
-  .offset(13px 0 15px 0; 0);
+  .offset(13px 0 15px 15px; 0 0 14px 0);
+
+  &[name="cat-age"] {
+    margin-bottom: 0;
+  }
 
   &::placeholder {
     font-family: "Oswald", "Arial", sans-serif;
@@ -41,26 +41,6 @@
     opacity: 1;
     text-transform: uppercase;
   }
-}
-
-.email {
-  margin-bottom: 14px;
-  padding-left: 15px;
-  width: 219px;
-}
-
-.userphone {
-  padding-left: 16px;
-  width: 204px;
-}
-
-.form__programm {
-  .offset(22px 0 19px 0; 0 0 26px 0);
-  .border(1px solid @grey_light; 0; 1px solid @grey_light; 0);
-}
-
-.weight {
-  color: @special_dark-grey-2;
 }
 
 .form__legend {
@@ -68,61 +48,11 @@
   color: @black;
 }
 
-.form__owner {
-  .offset(0; 0 0 24px 0);
-
-  .form__legend {
-    .offset(0; 0 0 35px 0);
-  }
-}
-
-.form__comment {
-  .offset(0 0 23px 0; 0);
-
-  .form__legend {
-    .offset(0; 0 0 38px 0);
-  }
-}
-
-.form__textarea {
-  width: 100%;
-  min-height: 150px;
-  .offset(9px 12px 0 15px; 0);
-  .typography(normal; 400; 16px; 18px);
-
-  &::placeholder {
-    font-family: "Oswald", "Arial", sans-serif;
-    .typography(normal; 400; 16px; 18px);
-    color: @special_dark-grey;
-    opacity: 1;
-    text-transform: uppercase;
-  }
-}
-
-.form__optionally {
-  .offset(0; 0 0 35px 0);
-
-  .form__elements {
-    .offset(0; 0 0 12px 0);
-
-    &:last-child {
-      .offset(0; 0);
-    }
-  }
-
-  .form__legend {
-    .offset(0; 0 0 34px 0);
-  }
-
-  .form__label {
-    color: @black;
-  }
-}
-
 .button-send {
   width: 100%;
   .offset(7px 44px; 0 0 21px 0);
   border: none;
+  font-family: "Oswald", "Arial", sans-serif;
   .typography(normal; 400; 16px; 20px);
 }
 

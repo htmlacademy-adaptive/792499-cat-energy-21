@@ -14,9 +14,9 @@
         <nav class="main-nav">
           <button class="main-nav__button-toggle button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Подбор программы</a></li>
           </ul>
         </nav>
       </div>
@@ -26,7 +26,7 @@
         <h1 class="form__title">Подбор программы</h1>
         <h2 class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
         <div class="form__inner">
-          <fieldset class="form__data fieldset">
+          <fieldset class="form__data form__fieldset">
             <legend class="visually-hidden">Данные кота</legend>
             <div class="form__elements">
               <label class="form__label" for="cat-name">Имя:*</label>
@@ -41,44 +41,44 @@
               <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
             </div>
           </fieldset>
-          <fieldset class="form__programm fieldset">
+          <fieldset class="form__programm form__fieldset">
             <legend class="visually-hidden">Выбор программы питания</legend>
             <div class="form__elements">
               <input class="form__input" type="radio" name="slim" id="slim">
-              <label class="form__label weight" for="slim">Похудение</label>
+              <label class="form__label form__weight" for="slim">Похудение</label>
             </div>
             <div class="form__elements">
               <input class="form__input" type="radio" name="weight-gain" id="weight-gain">
-              <label class="form__label weight" for="weight-gain">Набор массы</label>
+              <label class="form__label form__weight" for="weight-gain">Набор массы</label>
             </div>
             <div class="form__elements">
               <input class="form__input" type="radio" name="need-advice" id="need-advice">
-              <label class="form__label weight" for="need-advice">Не знаю (нужен ваш совет)</label>
+              <label class="form__label form__weight" for="need-advice">Не знаю (нужен ваш совет)</label>
             </div>
           </fieldset>
         </div>
-        <fieldset class="form__owner fieldset">
+        <fieldset class="form__owner form__fieldset">
           <legend class="form__legend">
             Контактные данные<br>
             (владельца кота)
           </legend>
           <div class="form__elements">
             <label class="form__label" for="usermail">E-mail:*</label>
-            <input class="form__input email" type="email" name="usermail" id="usermail" placeholder="kuklachev@gmail.com">
+            <input class="form__input" type="email" name="usermail" id="usermail" placeholder="kuklachev@gmail.com">
           </div>
           <div class="form__elements">
             <label class="form__label" for="userphone">Телефон:*</label>
-            <input class="form__input userphone" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90">
+            <input class="form__input" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90">
           </div>
         </fieldset>
-        <fieldset class="form__comment fieldset">
+        <fieldset class="form__comment form__fieldset">
           <legend class="form__legend">Комментарий</legend>
           <div class="form__elements">
             <label class="visually-hidden" for="textarea">Поле для ввода дополнительной информации</label>
             <textarea class="form__textarea" name="textfield" id="textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__optionally fieldset">
+        <fieldset class="form__optionally form__fieldset">
           <legend class="form__legend">Дополнительно</legend>
           <div class="form__elements">
             <input class="form__input" type="checkbox" name="sugarsubstitute" id="sugarsubstitute">
@@ -97,8 +97,8 @@
             <label class="form__label" for="vitamins">Витамины</label>
           </div>
         </fieldset>
-        <label class="visually-hidden" for="submit-btn button">Отправить данные формы</label>
-        <input class="button button-send" type="submit" name="submit-btn" id="submit-btn" value="Отправить заявку">
+        <label class="visually-hidden" for="submit-btn">Отправить данные формы</label>
+        <input class="form__button-send button" type="submit" name="submit-btn" id="submit-btn" value="Отправить заявку">
         <p class="form__note">* — Обязательные поля</p>
       </form>
       <section class="contacts contacts__inner">

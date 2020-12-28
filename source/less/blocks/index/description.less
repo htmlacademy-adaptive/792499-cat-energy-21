@@ -15,7 +15,7 @@
   list-style-type: none;
 }
 
-.generate-description__item(@n) when (@n > 0) {
+.description__item-generate(@n) when (@n > 0) {
   .description__item-@{n} {
     position: relative;
     .offset(0; 0 0 20px 0);
@@ -35,7 +35,7 @@
       background-repeat: no-repeat;
     }
   }
-  .generate-description__item(@n - 1);
+  .description__item-generate(@n - 1);
 }
 
-.generate-description__item(4);
+.description__item-generate(4);

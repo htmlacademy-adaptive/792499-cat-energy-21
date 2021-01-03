@@ -6,6 +6,11 @@
   .offset(0; 0 0 38px 0);
   .typography(normal; 400; 36px; 40px);
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    .offset(0; 0 0 32px 0);
+    .typography(normal; 400; 60px; 60px);
+  }
 }
 
 .description__list {
@@ -18,20 +23,21 @@
 .description__item-generate(@n) when (@n > 0) {
   .description__item-@{n} {
     position: relative;
-    .offset(0; 0 0 20px 0);
+    width: 199px;
+    .offset(0; 0 0 32px 0);
 
     &:last-child {
-      .offset(0; 0);
+      margin-right: 0;
     }
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -2px;
       left: -80px;
       width: 60px;
       height: 60px;
-      background-image: url("../img/description__item_@{n}.svg");
+      background-image: url("../img/mobile-images/description__item_@{n}.svg");
       background-repeat: no-repeat;
     }
   }
@@ -39,3 +45,86 @@
 }
 
 .description__item-generate(4);
+
+@media (min-width: @tablet-width) {
+  .description {
+    .offset(0; 0 0 46px 0);
+  }
+
+  .description__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  .description__item-generate(@n) when (@n > 0) {
+    .description__item-@{n} {
+      width: 245px;
+      .offset(151px 0 57px 0; 0 137px 0 0);
+
+      &:nth-child(-n+2) {
+        margin-bottom: 37px;
+      }
+
+      &:nth-child(1) {
+        margin-right: 153px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        background-image: url("../img/tablet-images/description__item_tablet-@{n}.svg");
+        background-repeat: no-repeat;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 111px;
+        width: 136px;
+        height: 280px;
+        background-image: url("../img/tablet-images/description__item_number-@{n}.svg");
+        background-repeat: no-repeat;
+        background-size: auto auto;
+        z-index: -1;
+      }
+    }
+    .description__item-generate(@n - 1);
+  }
+  .description__item-generate(4);
+}
+
+@media (min-width: @desktop-width) {
+  .description__list {
+
+    .description__item-1 {
+      width: 230px;
+      margin-right: 94px;
+      margin-bottom: 0;
+    }
+
+    .description__item-2 {
+      width: 246px;
+      margin-right: 79px;
+      margin-bottom: 0;
+    }
+
+    .description__item-3 {
+      width: 248px;
+      margin-right: 77px;
+    }
+
+    .description__item-4 {
+      width: 246px;
+    }
+  }
+}

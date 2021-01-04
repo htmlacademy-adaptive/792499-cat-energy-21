@@ -2,14 +2,17 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="wrapper">
+      <div class="page-header__container wrapper">
         <a class="page-header__logo" href="#">
-          <img src="img/page-header__logo.svg" width="190" height="38">
+          <img class="page-header__logo-img" src="img/mobile-images/page-header__logo.svg" width="190" height="38" alt="Логотип Cat Energy">
+          <img class="page-header__logo-img--full" src="img/tablet-images/page-header__logo-full.svg" width="174" height="52" alt="Логотип Cat Energy">
         </a>
         <nav class="main-nav">
           <button class="main-nav__button-toggle button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -20,20 +23,20 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <main class="page-main">
-      <section class="promo">
-        <div class="promo__inner">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <figure class="promo__illustration">
-            <figcaption class="promo__caption">Занялся собой? Займись котом</figcaption>
-            <img class="promo__image" src="https://via.placeholder.com/150x150">
+      <section class="page-header__promo">
+        <div class="page-header__promo-inner">
+          <h1 class="page-header__promo-title">Функциональное питание для котов</h1>
+          <figure class="page-header__promo-illustration">
+            <figcaption class="page-header__promo-caption">Занялся собой? Займись котом</figcaption>
+            <img class="page-header__promo-image" src="https://via.placeholder.com/150x150" alt="Кошачье питание в банке">
           </figure>
         </div>
-        <a class="promo__programm button" href="#">Подобрать программу</a>
+        <a class="page-header__promo-programm button" href="form.html">Подобрать программу</a>
       </section>
+    </header>
+    <main class="page-main">
       <section class="programm">
-        <div class="wrapper">
+        <div class="wrapper programm__wrapper">
           <article class="programm__section">
             <h2 class="programm__title programm__title--slim">Похудение</h2>
             <p class="programm__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -58,20 +61,23 @@
         </div>
       </section>
       <section class="example">
-        <div class="wrapper">
+        <div class="example__wrapper wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__desc-section">
             <dl class="example__desc-list">
               <dt class="example__desc-term">5 кг</dt>
-              <dd class="example__desc-definition">Снижение веса</dd>
+              <dd class="example__desc-definition">снижение веса</dd>
             </dl>
             <dl class="example__desc-list">
               <dt class="example__desc-term">60 дней</dt>
-              <dd class="example__desc-definition">Затрачено времени</dd>
+              <dd class="example__desc-definition">затрачено времени</dd>
+            </dl>
+            <dl class="example__desc-list example__expenses">
+              <dt class="example__desc-term example__cost">Затраты на питание:</dt>
+              <dd class="example__desc-definition example__cost example__cost currency">15 000 руб.</dd>
             </dl>
           </div>
-          <p class="example__cost">Затраты на питание: 15 000 руб.</p>
           <img class="example__image" src="https://via.placeholder.com/150x150">
           <div class="example__range">
             <p class="example__range-text">Было</p>
@@ -84,19 +90,19 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="wrapper">
+        <div class="wrapper contacts__wrapper">
           <div class="contacts__text-block">
             <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
           </div>
           <img class="contacts__map" src="https://via.placeholder.com/150x150">
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="wrapper">
+      <div class="wrapper page__footer-wrapper">
         <a class="page-footer__logo" href="#">
-          <img src="img/footer-logo-1.svg" width="128" height="24">
+          <img src="img/mobile-images/footer-logo-1.svg" width="128" height="24">
         </a>
         <div class="social page-footer__social">
           <h2 class="visually-hidden">Ссылки на социальные сети</h2>

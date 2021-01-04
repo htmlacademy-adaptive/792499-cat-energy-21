@@ -1,14 +1,46 @@
+.main-nav {
+  @media (min-width: @tablet-width) {
+    width: 440px;
+  }
+}
+
 .main-nav__list {
   .offset(0; 0);
   .typography(normal; 500; 20px; 20px);
   list-style-type: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav__button-toggle {
+  width: 18px;
+  height: 18px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__item {
   .offset(0; 0 0 23px 0);
+
+  @media (min-width: @tablet-width) {
+    .offset(0; 0 30px 0 0);
+    .typography(normal; 400; 18px; 24px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .main-nav__link {
   color: @black;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }

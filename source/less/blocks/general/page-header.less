@@ -1,3 +1,128 @@
 .page-header {
-  .offset(12px 0 0 0; 0 20px);
+  .offset(12px 0 0 0; 0);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+    background-image: url("../img/desktop-images/background-header.png");
+    background-repeat: no-repeat;
+    background-size: 720px 694px;
+    background-position: right center;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.page-header__logo {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    .offset(0; 0 95px 0 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(0; 0 540px 0 0);
+  }
+}
+
+.page-header__logo-img {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-img--full {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.page-header__promo {
+  .offset(0; 0 0 22px);
+}
+
+.page-header__promo-inner {
+  .offset(0; 0 0 10px);
+  background-color: @green-background;
+  background-image: url("../img/mobile-images/promo__illustration.png");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.page-header__promo-title {
+  .offset(0; 0 20px 25px 20px);
+  .typography(normal; 400; 36px; 36px);
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 531px;
+    .offset(0 0 0 117px; 0 0 41px 0);
+    .typography(normal; 400; 60px; 60px);
+    color: @black;
+  }
+}
+
+.page-header__promo-illustration {
+  .offset(0; 0 20px 0 20px);
+
+  @media (min-width: @tablet-width) {
+    .offset(0 0 0 88px; 0 20px 0 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.page-header__promo-caption {
+  .offset(0; 0 0 29px);
+  .typography(normal; 400; 14px; 14px);
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 283px;
+    .offset(0; 0);
+    .typography(normal; 400; 20px; 20px);
+    color: @black;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 155px;
+  }
+}
+
+.page-header__promo-image {
+  @media (min-width: @desktop-width) {
+    margin-top: -142px;
+  }
+}
+
+.page-header__promo-programm {
+  width: 280px;
+  .offset(7px 44px; 0 20px);
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    text-align: center;
+    .offset(14px 26px; 0 20px);
+  }
 }

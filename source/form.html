@@ -9,9 +9,10 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="wrapper">
-        <a class="page-header__logo" href="#">
-          <img src="img/page-header__logo.svg" width="190" height="38">
+      <div class="page-header__container wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-img" src="img/mobile-images/page-header__logo.svg" width="190" height="38" alt="Логотип Cat Energy">
+          <img class="page-header__logo-img--full page-header__logo-form" src="img/tablet-images/page-header__logo-full.svg" width="174" height="52" alt="Логотип Cat Energy">
         </a>
         <nav class="main-nav">
           <button class="main-nav__button-toggle button-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -30,15 +31,15 @@
         <div class="form__inner">
           <fieldset class="form__data form__fieldset">
             <legend class="visually-hidden">Данные кота</legend>
-            <div class="form__elements">
+            <div class="form__elements form__elements-data">
               <label class="form__label" for="cat-name">Имя:*</label>
               <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
             </div>
-            <div class="form__elements">
+            <div class="form__elements form__elements-data">
               <label class="form__label" for="cat-weight">Вес (кг):*</label>
               <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7">
             </div>
-            <div class="form__elements">
+            <div class="form__elements form__elements-data">
               <label class="form__label" for="cat-age">Возраст (лет):</label>
               <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
             </div>
@@ -60,17 +61,16 @@
           </fieldset>
         </div>
         <fieldset class="form__owner form__fieldset">
-          <legend class="form__legend">
-            Контактные данные<br>
-            (владельца кота)
-          </legend>
-          <div class="form__elements">
-            <label class="form__label" for="usermail">E-mail:*</label>
-            <input class="form__input" type="email" name="usermail" id="usermail" placeholder="kuklachev@gmail.com">
-          </div>
-          <div class="form__elements">
-            <label class="form__label" for="userphone">Телефон:*</label>
-            <input class="form__input" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90">
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
+          <div class="form__owner-inner">
+            <div class="form__elements form__elements-data">
+              <label class="form__label" for="usermail">E-mail:*</label>
+              <input class="form__input" type="email" name="usermail" id="usermail" placeholder="kuklachev@gmail.com">
+            </div>
+            <div class="form__elements form__elements-data">
+              <label class="form__label" for="userphone">Телефон:*</label>
+              <input class="form__input" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90">
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__comment form__fieldset">
@@ -81,42 +81,46 @@
           </div>
         </fieldset>
         <fieldset class="form__optionally form__fieldset">
-          <legend class="form__legend">Дополнительно</legend>
-          <div class="form__elements">
-            <input class="form__input" type="checkbox" name="sugarsubstitute" id="sugarsubstitute">
-            <label class="form__label" for="sugarsubstitute">Сахарозаменитель</label>
-          </div>
-          <div class="form__elements">
-            <input class="form__input" type="checkbox" name="water" id="water">
-            <label class="form__label" for="water">Питьевая вода</label>
-          </div>
-          <div class="form__elements">
-            <input class="form__input" type="checkbox" name="milk" id="milk">
-            <label class="form__label" for="milk">Молоко</label>
-          </div>
-          <div class="form__elements">
-            <input class="form__input" type="checkbox" name="vitamins" id="vitamins">
-            <label class="form__label" for="vitamins">Витамины</label>
+          <legend class="form__legend form__legend-optionally">Дополнительно</legend>
+          <div class="form__optionally-inner">
+            <div class="form__elements form__elements-optionally">
+              <input class="form__input" type="checkbox" name="sugarsubstitute" id="sugarsubstitute">
+              <label class="form__label form__label-optionally" for="sugarsubstitute">Сахарозаменитель</label>
+            </div>
+            <div class="form__elements form__elements-optionally">
+              <input class="form__input" type="checkbox" name="water" id="water">
+              <label class="form__label form__label-optionally" for="water">Питьевая вода</label>
+            </div>
+            <div class="form__elements form__elements-optionally">
+              <input class="form__input" type="checkbox" name="milk" id="milk">
+              <label class="form__label form__label-optionally" for="milk">Молоко</label>
+            </div>
+            <div class="form__elements form__elements-optionally">
+              <input class="form__input" type="checkbox" name="vitamins" id="vitamins">
+              <label class="form__label form__label-optionally" for="vitamins">Витамины</label>
+            </div>
           </div>
         </fieldset>
-        <label class="visually-hidden" for="submit-btn">Отправить данные формы</label>
-        <input class="form__button-send button" type="submit" name="submit-btn" id="submit-btn" value="Отправить заявку">
-        <p class="form__note">* — Обязательные поля</p>
+        <div class="form__submit">
+          <label class="visually-hidden" for="submit-btn">Отправить данные формы</label>
+          <input class="form__button-send button" type="submit" name="submit-btn" id="submit-btn" value="Отправить заявку">
+          <p class="form__note">* — Обязательные поля</p>
+        </div>
       </form>
       <section class="contacts contacts__inner">
-        <div class="wrapper">
+        <div class="wrapper contacts__wrapper">
           <div class="contacts__text-block">
             <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
           </div>
           <img class="contacts__map" src="https://via.placeholder.com/150x150">
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="wrapper">
+      <div class="wrapper page__footer-wrapper">
         <a class="page-footer__logo" href="#">
-          <img src="img/footer-logo-1.svg" width="128" height="24">
+          <img src="img/mobile-images/footer-logo-1.svg" width="128" height="24">
         </a>
         <div class="social page-footer__social">
           <h2 class="visually-hidden">Ссылки на социальные сети</h2>

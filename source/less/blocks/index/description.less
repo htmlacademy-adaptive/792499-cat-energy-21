@@ -1,22 +1,16 @@
 .description {
-  .offset(0; 0 0 42px 0);
+  .offset(0; 0 0 46px 0);
 }
 
 .description__title {
   .offset(0; 0 0 38px 0);
   .typography(normal; 400; 36px; 40px);
   color: @black;
-
-  @media (min-width: @tablet-width) {
-    .offset(0; 0 0 32px 0);
-    .typography(normal; 400; 60px; 60px);
-  }
 }
 
 .description__list {
   .offset(0 0 0 80px; 0);
   font-family: "Arial", sans-serif;
-  .typography(normal; 400; 14px; 18px);
   list-style-type: none;
 }
 
@@ -24,10 +18,11 @@
   .description__item-@{n} {
     position: relative;
     width: 199px;
-    .offset(0; 0 0 32px 0);
+    .offset(0; 0 0 26px 0);
+    .typography(normal; 400; 14px; 18px);
 
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
     }
 
     &::before {
@@ -48,7 +43,13 @@
 
 @media (min-width: @tablet-width) {
   .description {
-    .offset(0; 0 0 46px 0);
+    .offset(0 0 45px 0; 0);
+    .border(0; 0; 1px solid @special_grey-4; 0);
+  }
+
+  .description__title {
+    .offset(0; 0 0 72px 0);
+    .typography(normal; 400; 60px; 60px);
   }
 
   .description__list {
@@ -59,20 +60,10 @@
 
   .description__item-generate(@n) when (@n > 0) {
     .description__item-@{n} {
-      width: 245px;
-      .offset(151px 0 57px 0; 0 137px 0 0);
-
-      &:nth-child(-n+2) {
-        margin-bottom: 37px;
-      }
-
-      &:nth-child(1) {
-        margin-right: 153px;
-      }
-
-      &:nth-child(2) {
-        margin-right: 0;
-      }
+      width: 201px;
+      .offset(113px 0 57px 0; 0 176px 0 0);
+      .typography(normal; 400; 16px; 24px);
+      z-index: 1;
 
       &::before {
         content: "";
@@ -89,13 +80,36 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 111px;
+        left: 125px;
         width: 136px;
         height: 280px;
         background-image: url("../img/tablet-images/description__item_number-@{n}.svg");
         background-repeat: no-repeat;
         background-size: auto auto;
         z-index: -1;
+      }
+
+      &:nth-child(-n+2) {
+        margin-bottom: 76px;
+      }
+
+      &:nth-child(1) {
+        margin-right: 182px;
+      }
+
+      &:nth-child(2) {
+        width: 227px;
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        width: 209px;
+      }
+
+      &:last-child {
+        width: 245px;
+        margin-right: 0;
+        text-align: left;
       }
     }
     .description__item-generate(@n - 1);

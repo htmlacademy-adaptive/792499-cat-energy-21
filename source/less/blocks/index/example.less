@@ -6,16 +6,53 @@
     .offset(42px 0 14px 0; 0);
     background: linear-gradient(to bottom, @white, @white 57%, @grey 57%, @grey);
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    .offset(0 0 35px 0; 0);
+    background: linear-gradient(to bottom, @white, @white 29%, @grey 29%, @grey);
+  }
+}
+
+.example__layout {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    align-items: stretch;
+    column-gap: 134px;
+  }
+}
+
+.example__layout-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media (min-width: 321px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .example__title {
   .offset(0; 0 0 35px 0);
   .typography(normal; 400; 36px; 40px);
   color: @black;
+  word-wrap: break-word;
+
+  @media (min-width: 321px) and (max-width: 767px) {
+    .offset(0; 0 auto 35px auto);
+  }
 
   @media (min-width: @tablet-width) {
-    .offset(0; 0 0 63px 0);
+    .offset(0; 0 0 65px 0);
     .typography(normal; 400; 60px; 60px);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 325px;
+    .offset(56px 0 0 0; 0 0 147px 0);
   }
 }
 
@@ -33,20 +70,26 @@
 
   @media (min-width: @desktop-width) {
     width: 436px;
+    .offset(0; 0 0 84px 0);
   }
 }
 
 .example__desc-section {
   display: flex;
   flex-wrap: wrap;
-  .offset(0; 0 0);
+  .offset(0; 0);
+
+  @media (min-width: 321px) {
+    .offset(0; 0 auto);
+  }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 78px;
+    .offset(0; 0 0 78px 0);
   }
 
   @media (min-width: @desktop-width) {
     width: 366px;
+    .offset(0; 0);
   }
 }
 
@@ -60,12 +103,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 180px;
-    margin-bottom: 0;
+    .offset(0; 0 180px 0 0);
 
     &:first-child {
       margin-right: 93px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(0; 0);
   }
 }
 
@@ -79,6 +125,10 @@
     .offset(16px 0 0 23px; 0 0 11px 0);
     .typography(normal; 400; 30px; 37px);
   }
+
+  @media (min-width: @desktop-width) {
+    .offset(0 0 0 23px; 0 0 10px 0);
+  }
 }
 
 .example__desc-list:nth-child(2) .example__desc-term {
@@ -86,6 +136,10 @@
 
   @media (min-width: @tablet-width) {
     .offset(16px 0 0 10px; 0 0 11px 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(0 0 0 10px; 0 0 11px 0);
   }
 }
 
@@ -112,6 +166,10 @@
     height: 72px;
     background-image: url("data:image/svg+xml,%3Csvg width='162' height='72' viewBox='0 0 162 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 1H159C160.105 1 161 1.89543 161 3V69C161 70.1046 160.105 71 159 71H138V72H159C160.657 72 162 70.6569 162 69V3C162 1.34315 160.657 0 159 0H3C1.34315 0 0 1.34315 0 3V69C0 70.6569 1.34314 72 3 72H24V71H3C1.89543 71 1 70.1046 1 69V3C1 1.89543 1.89543 1 3 1Z' fill='%23CDCDCD'/%3E%3C/svg%3E%0A");
   }
+
+  @media (min-width: @desktop-width) {
+    top: -15px;
+  }
 }
 
 .example__desc-definition {
@@ -136,6 +194,10 @@
       margin-left: -10px;
       background-color: @white;
       z-index: 3;
+
+      @media (min-width: @desktop-width) {
+        background-color: @grey;
+      }
     }
   }
 }
@@ -155,16 +217,38 @@
     .offset(12px 0 0 0; 0);
     .typography(normal; 400; 20px; 20px);
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    .offset(55px 0 0 0; 0);
+  }
 }
 
 .example__cost-spending {
   @media (min-width: @tablet-width) {
     margin-bottom: 9px;
   }
+
+  @media (min-width: @desktop-width) {
+    .offset(0; 0 63px 0 0);
+  }
 }
 
 .example__slider {
   .offset(0; 0);
+
+  @media (min-width: 321px) and (max-width: 767px) {
+    display: flex;
+    width: 311px;
+    .offset(0; 0 auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .example__slider-wrapper {
@@ -175,6 +259,10 @@
     width: 708px;
     height: 620px;
     .offset(0 0 0 15px; 17px 0 0 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(0; 0);
   }
 }
 
@@ -201,6 +289,10 @@
 
   @media (min-width: @tablet-width) {
     .offset(12px 0 0 0; 0 0 0 53px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(33px 0 0 0; 0 0 0 79px);
   }
 }
 

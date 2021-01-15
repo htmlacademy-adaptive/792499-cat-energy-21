@@ -3,7 +3,11 @@
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
-    .offset(58px 0 22px 30px; 0);
+    .offset(52px 0 22px 30px; 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(55px 0 22px 110px; 0);
   }
 }
 
@@ -11,12 +15,11 @@
   position: relative;
   .offset(0; 0 20px);
 
-  @media (@mobile-width-only) {
-
+  @media (max-width: 320px) {
     &::before {
       content: "";
       position: absolute;
-      top: 55px;
+      top: 30%;
       left: 0;
       width: 280px;
       height: 1px;
@@ -25,20 +28,39 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    .offset(0; 0);
+  @media (min-width: 321px) and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    .offset(0; 0 20px);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    .offset(0; 0);
   }
 }
 
 .page-footer__logo {
   .offset(0; 0 76px 27px 76px);
 
+  @media (min-width: 321px) {
+    .offset(0; 0 auto 27px auto);
+  }
+
   @media (min-width: @tablet-width) {
     .offset(8px 0 0 0; 0 156px 0 0);
     width: 128px;
     height: 24px;
+  }
+
+  @media (min-width: 780px) and (max-width: 1439px) {
+    .offset(8px 0 0 0; 0 auto 0 auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(8px 0 0 0; 0 413px 0 0);
   }
 }
 
@@ -48,9 +70,17 @@
   align-items: center;
   .offset(22px 0 0 0; 0);
 
+  @media (min-width: 321px) {
+    .offset(22px 0 0 0; 0 auto);
+  }
+
   @media (min-width: @tablet-width) {
     align-items: flex-start;
     .offset(0; 0);
+  }
+
+  @media (min-width: 780px) and (max-width: 1439px) {
+    .offset(0; 0 auto);
   }
 }
 
@@ -58,12 +88,20 @@
   .offset(0; 0 140px 0 0);
 
   @media (min-width: @tablet-width) {
-    .offset(8px 0 0 0; 0 22px 0 0);
+    .offset(6px 0 0 0; 0 22px 0 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    .offset(10px 0 0 0; 0 22px 0 0);
   }
 }
 
 .page-footer__academy-logo-link {
   @media (min-width: @tablet-width) {
-    padding-top: 2px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 4px;
   }
 }

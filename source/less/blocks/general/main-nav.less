@@ -111,8 +111,8 @@
     content: "";
     position: absolute;
     top: 66px;
-    left: -300px;
-    width: 889px;
+    left: -20px;
+    width: 320px;
     height: 1px;
     background-color: @special_grey-4;
   }
@@ -131,6 +131,10 @@
   @media (min-width: @tablet-width) {
     .offset(0 0 24px 0; 0);
     .typography(normal; 400; 18px; 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .typography(normal; 400; 20px; 30px);
   }
 }
 

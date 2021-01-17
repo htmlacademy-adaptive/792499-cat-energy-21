@@ -40,13 +40,11 @@
 
   @media (min-width: @tablet-width) {
     .offset(63px 71px 57px; 0);
-    .typography(normal; 400; 20px; 21px);
     justify-content: space-between;
   }
 
   @media (min-width: 770px) and (max-width: 1069px) {
-    width: 394px;
-    .offset(30px 0 26px 40px; 0 auto);
+    .offset(30px 30px 26px 30px; 0);
   }
 
   @media (min-width: 1070px) and (max-width: 1439px) {
@@ -78,14 +76,16 @@
 
   @media (min-width: 600px) {
     width: 250px;
-    .typography(normal; 400; 20px; 21px);
+    font-size: 20px;
+    line-height: 21px;
     .offset(0; 0 0 50px 0);
   }
 
   @media (min-width: @tablet-width) {
     width: 171px;
     .offset(0; 0);
-    .typography(normal; 400; 20px; 21px);
+    font-size: 20px;
+    line-height: 21px;
   }
 }
 
@@ -118,12 +118,14 @@
 
   @media (min-width: 600px) {
     width: 159px;
-    .typography(normal; 400; 16px; 20px);
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @media (min-width: @tablet-width) {
     width: 159px;
-    .typography(normal; 400; 16px; 20px);
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
   }
 
@@ -158,11 +160,13 @@
   }
 
   @media (min-width: 769px) {
-    .offset(0; 0 auto);
+    .offset(0; 0);
+    width: 100%;
   }
 
   @media (min-width: 1069px) {
     .offset(0; 0);
+    width: 768px;
   }
 
   @media (min-width: @desktop-width) {

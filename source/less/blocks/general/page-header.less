@@ -2,11 +2,12 @@
   .offset(12px 0 0 0; 0);
 
   @media (min-width: @tablet-width) {
-    .offset(25px 0 0 0; 0);
+    padding-top: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    .offset(54px 0 0 0; 0 0 82px 0);
+    margin-bottom: 82px;
+    padding-top: 54px;
   }
 }
 
@@ -59,7 +60,7 @@
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    .offset(0; 0 540px 0 0);
+    margin-right: 540px;
   }
 }
 
@@ -84,7 +85,7 @@
   .offset(0; 0 0 22px);
 
   @media (min-width: @tablet-width) {
-    .offset(0; 0);
+    margin: 0;
   }
 }
 
@@ -112,23 +113,23 @@
 
   @media (min-width: @desktop-width) {
     min-height: 499px;
-    .offset(50px 93px 0; 0);
+    padding: 50px 93px 0;
   }
 }
 
 .page-header__promo-title {
   display: inline-block;
   vertical-align: middle;
-  .offset(26px 0 0 0; 0 0 25px -6px);
-  .typography(normal; 400; 36px; 36px);
+  .offset(26px 0 0 0; 0 0 25px 0);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
   color: @white;
   text-align: center;
 
   @media (min-width: 321px) {
     width: 250px;
-    .offset(26px 0 0 0; 0 auto 25px auto);
-    font-size: 36px;
-    line-height: 36px;
+    margin: 0 auto 25px auto;
   }
 
   @media (min-width: @tablet-width) {
@@ -141,22 +142,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    .offset(0 0 0 97px; 0 0 40px 0);
+    margin-bottom: 40px;
   }
 }
 
 .page-header__subtitle {
   .offset(0 0 0 40px; 0 0 29px);
-  .typography(normal; 400; 14px; 14px);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
   color: @white;
   text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    .offset(0 0 0 97px; 0 0 20px 0);
-    font-size: 20px;
-    line-height: 20px;
-    color: @black;
-  }
 
   @media (min-width: 321px) {
     width: 198px;
@@ -165,11 +161,15 @@
 
   @media (min-width: @tablet-width) {
     width: 380px;
-    .offset(0 0 0 97px; 0 0 20px 0);
+    padding-left: 97px;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
   }
 
   @media (min-width: @desktop-width) {
-    .offset(0 0 0 97px; 0 0 95px 0);
+    margin-bottom: 95px;
   }
 }
 
@@ -182,7 +182,7 @@
 
   @media (min-width: 321px) {
     display: block;
-    .offset(0; 0 auto 0 auto);
+    margin: 0 auto;
   }
 
   @media (min-width: @tablet-width) {
@@ -202,10 +202,11 @@
 .page-header__promo-programm {
   width: 280px;
   .offset(10px 0 10px 73px; 0 20px);
-  .typography(normal; 400; 14px; 18px);
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: 321px) {
-    .offset(10px 0 10px 73px; 0 auto);
+    margin: 0 auto;
   }
 
   @media (min-width: @tablet-width) {

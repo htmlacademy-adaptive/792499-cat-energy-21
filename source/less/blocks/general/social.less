@@ -2,7 +2,7 @@
   .offset(46px 77px 0 73px; 0 0 15px 0);
 
   @media (min-width: 321px) {
-    .offset(46px 77px 0 73px; 0 auto 15px auto);
+    margin: 0 auto 15px auto;
   }
 
   @media (min-width: @tablet-width) {
@@ -10,11 +10,11 @@
   }
 
   @media (min-width: 780px) and (max-width: 1439px) {
-    .offset(0; 0 auto 15px auto);
+    margin: 0 auto 15px auto;
   }
 
   @media (min-width: @desktop-width) {
-    .offset(0; 0 387px 15px 0);
+    margin: 0 387px 15px 0;
   }
 }
 
@@ -26,18 +26,18 @@
 }
 
 .social__item {
-  .offset(0; 0 33px 0 0);
+  margin-right: 33px;
 
   &:first-child {
-    .offset(0; 0 36px 0 0);
+    margin-right: 36px;
   }
 
   &:last-child {
-    .offset(0; 0);
+    margin-right: 0;
   }
 
   @media (min-width: @tablet-width) {
-    .offset(0; 0 21px 0 0);
+    margin-right: 21px;
 
     &:first-child {
       margin-right: 27px;
@@ -53,7 +53,7 @@
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 22px;
-    .offset(0 0 0 0; 6px 0 0 0);
+    .offset(0; 6px 0 0 0);
   }
 }
 
@@ -61,7 +61,7 @@
   @media (min-width: @tablet-width) {
     width: 23px;
     height: 23px;
-    .offset(0 0 0 0; 7px 0 0 0);
+    .offset(0; 7px 0 0 0);
   }
 }
 
@@ -69,5 +69,6 @@
   @media (min-width: @tablet-width) {
     width: 28px;
     height: 33px;
+    .offset(0; 0);
   }
 }

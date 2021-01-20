@@ -2,7 +2,8 @@
   .offset(27px 0 32px 0; 0 20px);
 
   @media (min-width: @tablet-width) {
-    .offset(0 0 32px 0; 0 30px 0 70px);
+    margin: 0 30px 0 70px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -12,7 +13,9 @@
 
 .form__title {
   .offset(0; 0 0 37px 0);
-  .typography(normal; 400; 36px; 36px);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -29,13 +32,15 @@
 .form__description {
   width: 226px;
   .offset(0; 0 0 39px 0);
-  .typography(normal; 400; 14px; 18px);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   color: @black;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 323px;
-    .offset(0; 0 0 66px 0);
+    margin-bottom: 66px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -52,7 +57,7 @@
     display: grid;
     grid-template-columns: 570px 570px;
     grid-gap: 80px;
-    .offset(0; 0);
+    padding-right: 0;
   }
 }
 
@@ -65,7 +70,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    .offset(0; 0 0 20px 0);
+    margin-bottom: 20px;
 
     .form__input {
       flex-grow: 2;
@@ -91,7 +96,8 @@
 }
 
 .form__legend {
-  .typography(normal; 400; 24px; 26px);
+  font-size: 24px;
+  line-height: 26px;
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -102,7 +108,7 @@
 
 .form__label {
   .offset(0; 0 16px 0 0);
-  .typography(normal; 400; 16px; 18px);
+  line-height: 18px;
   text-transform: uppercase;
   color: @special_dark-grey;
 
@@ -136,7 +142,7 @@
     .offset(0; 0 0 35px 0);
 
     @media (min-width: @tablet-width) {
-      .offset(0; 0 0 76px 0);
+      margin-bottom: 76px;
     }
   }
 }
@@ -242,13 +248,13 @@
 .form__note {
   .offset(0; 0);
   font-family: "Arial", sans-serif;
-  .typography(normal; 400; 14px; 16px);
+  font-size: 14px;
+  line-height: 16px;
   color: @black;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    line-height: 16px;
   }
 }
 
@@ -269,6 +275,5 @@
 
   @media (min-width: @desktop-width) {
     width: 568px;
-    .offset(13px 0; 0 61px 0 0);
   }
 }

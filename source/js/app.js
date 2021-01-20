@@ -1,5 +1,7 @@
 'use strict'
 
+// Меню для мобильной версии
+
 let mainNav = document.querySelector('.main-nav');
 let buttonToggle = document.querySelector('.main-nav__button-toggle');
 
@@ -14,3 +16,20 @@ buttonToggle.addEventListener('click', function() {
     mainNav.classList.remove('main-nav--opened');
   }
 });
+
+// Слайдер Было-стало
+
+let imageAfter = document.querySelector('.example__slider-image--after');
+let imageBefore = document.querySelector('.example__slider-image--before');
+let range = document.querySelector('.example__input-range');
+
+range.onchange = function(evt) {
+  evt.preventDefault();
+if (range.value === "2") {
+  imageBefore.classList.remove("example__image-visible");
+  imageAfter.classList.add("example__image-visible");
+  } else {
+    imageAfter.classList.remove("example__image-visible");
+    imageBefore.classList.add("example__image-visible");
+  }
+};

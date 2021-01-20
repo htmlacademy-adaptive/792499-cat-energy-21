@@ -1,19 +1,22 @@
 .main-nav {
+  @media (min-width: 321px) {
+    .offset(0; 0 auto);
+  }
+
   @media (min-width: @tablet-width) {
-    width: 438px;
-    .offset(16px 0 0 0; 0);
+    .offset(16px 0 0 0; 0 auto 24px 0);
   }
 }
 
 .main-nav__list {
   display: block;
   .offset(0; 0);
-  .typography(normal; 500; 20px; 20px);
   list-style-type: none;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -64,25 +67,23 @@
   z-index: 10;
 }
 
-.main-nav--no-js .main-nav__button-toggle {
-  display: none;
-}
+@media (max-width: @mobile-width-only) {
+  .main-nav--no-js .main-nav__button-toggle {
+    display: none;
+  }
 
-.main-nav--no-js .main-nav__list {
-  display: block;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
+  .main-nav--no-js .main-nav__list {
+    display: block;
   }
 }
 
 .main-nav__item {
   position: relative;
-  .offset(0; 0);
+  .offset(22px 50px 24px 49px; 0);
 
   @media (min-width: @tablet-width) {
-    .offset(0; 0 32px 0 0);
-    .typography(normal; 400; 18px; 24px);
+    padding: 0;
+    margin-right: 35px;
 
     &:nth-child(2) {
       margin-right: 37px;
@@ -106,27 +107,48 @@
   }
 }
 
+.main-nav__item:first-child {
+  padding: 24px 102px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-right: 34px;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav__item::after {
     content: "";
     position: absolute;
     top: 66px;
     left: -20px;
-    width: 767px;
+    width: 320px;
     height: 1px;
     background-color: @special_grey-4;
+  }
+
+  .main-nav__item:nth-child(2)::after {
+    top: 64px;
   }
 }
 
 .main-nav__link {
   display: block;
-  .offset(22px 0 24px 0; 0);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
   color: @black;
-  text-align: center;
 
-  /*&:first-child {
-    padding-top: 0;
-  }*/
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .main-nav__link--color {

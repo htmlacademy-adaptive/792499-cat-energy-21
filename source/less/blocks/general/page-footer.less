@@ -1,22 +1,108 @@
 .page-footer {
   .offset(39px 0 22px 0; 0);
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 0 22px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 57px 0 22px 110px;
+  }
 }
 
 .page__footer-wrapper {
+  position: relative;
+  .offset(0; 0 20px);
+
+  @media (max-width: 320px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 0;
+      width: 280px;
+      height: 1px;
+      background-color: @grey_light;
+      box-shadow: 0 63px 1px 0 @grey_light;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
   }
 }
 
 .page-footer__logo {
-  display: block;
-  .offset(0; 0 76px);
+  .offset(0; 0 76px 27px 76px);
+
+  @media (min-width: 321px) {
+    margin: 0 auto 27px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    margin: 0 156px 0 0;
+    width: 128px;
+    height: 24px;
+  }
+
+  @media (min-width: 780px) and (max-width: 1439px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 413px 0 0;
+  }
 }
 
 .page-footer__developed {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  .offset(22px 0 0 0; 0);
+
+  @media (min-width: 321px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    .offset(0; 0);
+  }
+
+  @media (min-width: 780px) and (max-width: 1439px) {
+    .offset(0; 0 auto);
+  }
+}
+
+.page-footer__academy-link {
+  .offset(0; 0 140px 0 0);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+    margin-right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+  }
+}
+
+.page-footer__academy-logo-link {
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 4px;
+  }
 }

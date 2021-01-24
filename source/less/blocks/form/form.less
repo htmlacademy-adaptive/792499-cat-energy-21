@@ -131,6 +131,10 @@
     margin-bottom: 65px;
     padding-right: 34px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .form__fieldset-inner {
@@ -169,12 +173,14 @@
 
 .form__legend {
   position: relative;
-  .offset(0; 0);
+  width: 100%;
+  .offset(0; 0 0 36px 0);
   font-size: 24px;
   line-height: 26px;
   color: @black;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -186,139 +192,22 @@
   position: absolute;
 }
 
-.form__legend--owner {
-  margin-bottom: 36px;
-  padding-right: 90px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-    padding-right: 106px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-right: 708px;
-  }
-}
-
-.form__legend--owner::before {
-  top: 17px;
-  right: -19px;
-  width: 99px;
+.form__legend--line::before {
+  width: 100%;
   height: 2px;
+  right: -20px;
   background-color: @basic-green;
 
   @media (min-width: @tablet-width) {
-    top: 22px;
-    right: -88px;
-    width: 154px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 20px;
-    right: -110px;
-    width: 778px;
-  }
-}
-
-.form__legend--owner::after {
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    left: -70px;
-    width: 30px;
-    height: 2px;
-    background-color: @basic-green;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 20px;
-    left: -110px;
-    width: 70px;
-  }
-}
-
-.form__legend--comment {
-  margin-bottom: 38px;
-  padding-right: 120px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
-    padding-right: 486px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-right: 1038px;
-  }
-}
-
-.form__legend--comment::before {
-  top: 15px;
-  right: -58px;
-  width: 158px;
-  height: 2px;
-  background-color: @basic-green;
-
-  @media (min-width: @tablet-width) {
-    width: 478px;
-    top: 22px;
     right: -30px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 23px;
     right: -110px;
-    width: 1108px;
   }
 }
 
-.form__legend--comment::after {
-  top: 22px;
-  left: -70px;
-  width: 30px;
-  height: 2px;
-  background-color: @basic-green;
-
-  @media (min-width: @desktop-width) {
-    top: 22px;
-    left: -110px;
-    width: 70px;
-  }
-}
-
-.form__legend--optionally {
-  margin-bottom: 34px;
-  padding-right: 110px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
-    padding-right: 456px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-right: 1008px;
-  }
-}
-
-.form__legend--optionally::before {
-  top: 15px;
-  right: -49px;
-  width: 136px;
-  height: 2px;
-  background-color: @basic-green;
-
-  @media (min-width: @tablet-width) {
-    top: 22px;
-    right: -31px;
-    width: 446px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 24px;
-    right: -110px;
-    width: 1078px;
-  }
-}
-
-.form__legend--optionally::after {
+.form__legend--line::after {
   @media (min-width: @tablet-width) {
     top: 22px;
     left: -70px;
@@ -328,8 +217,106 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 20px;
     left: -110px;
     width: 70px;
+  }
+}
+
+.form__legend--line--owner {
+  @media (max-width: @mobile-width-only) {
+    padding-right: 79px;
+  }
+}
+
+.form__legend--line--owner::before {
+  top: 17px;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    right: -64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    right: -110px;
+  }
+}
+
+.form__legend--line-comment {
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.form__legend--line-comment::before {
+  top: 15px;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+  }
+}
+
+.form__legend--line-comment::after {
+  @media (min-width: @desktop-width) {
+    top: 22px;
+  }
+}
+
+.form__legend--line-optionally {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.form__legend--line-optionally::before {
+  top: 17px;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+  }
+}
+
+.form__legend--line-optionally::after {
+  @media (min-width: @desktop-width) {
+    top: 22px;
+  }
+}
+
+.form__legend--title {
+  position: relative;
+  display: block;
+  padding-right: 15px;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 25px;
+  }
+}
+
+.form__legend--owner {
+  max-width: 360px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 553px;
+  }
+}
+
+.form__legend--comment {
+  @media (max-width: @mobile-width-only) {
+    max-width: 142px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 220px;
+    padding-right: 25px;
+  }
+}
+
+.form__legend--optionally {
+  max-width: 164px;
+  @media (min-width: @tablet-width) {
+    max-width: 252px;
   }
 }
 

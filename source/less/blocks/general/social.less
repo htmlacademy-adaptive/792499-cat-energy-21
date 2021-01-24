@@ -1,10 +1,11 @@
 .social {
-  .offset(46px 77px 0 73px; 0 0 15px 0);
+  .offset(20px 0 15px 0; 0 auto);
 
-  @media (min-width: 321px) {
-    margin: 0 auto 15px auto;
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    border-top: 1px solid @grey_light;
+    border-bottom: 1px solid @grey_light;
   }
-
   @media (min-width: @tablet-width) {
     .offset(0; 0 131px 15px 0);
   }
@@ -21,7 +22,7 @@
 .social__list {
   display: flex;
   flex-wrap: wrap;
-  .offset(0; 0);
+  .offset(0; 0 auto);
   list-style-type: none;
 }
 
